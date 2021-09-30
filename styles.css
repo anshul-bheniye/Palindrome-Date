@@ -1,0 +1,21 @@
+:root {
+  --backgroundColor-body: black;
+  --text-color: white;
+}
+
+body {
+  background-color: var(--backgroundColor-body);
+  color: var(--text-color);
+}
+
+.container {
+  border: 3px solid var(--text-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  justify-content: center;
+  text-align: center;
+  margin: 250px auto;
+  font-size: 32px;
+}
