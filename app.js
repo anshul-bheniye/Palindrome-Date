@@ -1,5 +1,5 @@
 // ex-01 takes str and reverse it
-function strReverse(str){
+var strReverse = (str) => {
     let listOfChars = str.split("");
     // ['J', 'a', 'v', 'a', 'S', 'c', 'r', 'i', 'p', 't']
     let reverseListOfChar = listOfChars.reverse();
@@ -11,13 +11,13 @@ function strReverse(str){
     //   console.log(strReverse('JavaScript'));
 
 //  ex-02  function to check for palindrome
-function isPalindrome(str){
+var isPalindrome = (str) => {
   var reversedString = strReverse(str);
   return str === reversedString;
 }
 
 // ex 03 convert date to string
-function convertDateToStr(date){
+var convertDateToStr = (date) => {
   var dateStr = {
     day: "",
     month: "",
@@ -48,7 +48,7 @@ function convertDateToStr(date){
 // output {day: '08', month: '04', year: '1111'}
 
 // ex 04 
-function getAllDateFormats(date){
+var getAllDateFormats = (date) => {
   // helper function
   var dateStr = convertDateToStr(date);
 
@@ -64,7 +64,7 @@ function getAllDateFormats(date){
 }
 
 // ex 05
-function checkPalindromeForAllDateFormats(date){
+var checkPalindromeForAllDateFormats = (date) => {
   var listOfPalindromes = getAllDateFormats(date);
   var bar = false;
 
@@ -79,7 +79,7 @@ function checkPalindromeForAllDateFormats(date){
 
 // ex 06
 // checks leap Year
-function isLeapYear(year){
+var isLeapYear = (year) => {
   if(year % 400 === 0){
     return true;
   }
@@ -93,7 +93,7 @@ function isLeapYear(year){
 }
 
 // get next date
-function getNextDate(date){
+var getNextDate = (date) => {
   var day = date.day + 1;
   var month = date.month;
   var year = date.year;
@@ -138,7 +138,7 @@ function getNextDate(date){
   };
 }
 
-function getNextPalindromeDate(date){
+var getNextPalindromeDate = (date) => {
   var ctr = 0;
   var nextDate = getNextDate(date);
 
@@ -158,7 +158,7 @@ var dateInput = document.getElementById('bday-input');
 var check = document.getElementById('check-btn');
 var resultRef = document.getElementById('result');
 
-function clickHandler(e){
+var clickHandler = (e) => {
   var bdayStr = dateInput.value;
 
 resultRef.innerHTML = "<img src='images/calculate-result.gif' alt='gify processing gif image' width='400px'>";
